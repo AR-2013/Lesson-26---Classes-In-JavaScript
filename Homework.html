@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Homework
+        </title>
+    </head>
+    <body>
+        <p id="details"> </p>
+        <p id="greetings"> </p>
+        <script>
+             class Student {
+            constructor(name) {
+                this.studentName = name;
+            }
+            static hello() {
+                return "Hello";
+            }
+            present() {
+                return 'My name is ' + this.studentName;
+            }
+        }
+        class Gradev extends Student {
+            constructor(name, grade) {
+                super(name);
+                this.studentGrade;
+            }
+            show() {
+                return this.present() + ', from' + this.studentGrade;
+            }
+        }
+        let myStudent = new Grade("Tia", "Grade 5");
+        document.getElementById("details").innerHTML = myStudent.show();
+        document.getElementById("greetings").innerHTML = Student.hello();
+        </script>
+    </body>
+</html>
